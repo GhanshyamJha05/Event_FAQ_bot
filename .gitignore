@@ -1,0 +1,13 @@
+# Environment variables
+.env
+
+# Logs
+questions.log
+
+# Build output
+event-faq-bot
+event-faq-bot.exe
+*.exe
+
+# Go workspace file
+go.work
