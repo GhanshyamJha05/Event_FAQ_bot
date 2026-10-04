@@ -32,8 +32,8 @@ func main() {
 	}
 
 	organizerContact := os.Getenv("ORGANIZER_CONTACT")
-	if organizerContact == "" {
-		organizerContact = "organizer@example.com"
+	if err := bot.ValidateContact(organizerContact); err != nil {
+		log.Fatalf("Invalid contact: %v", err)
 	}
 
 	eventFile := os.Getenv("EVENT_FILE")
